@@ -5,6 +5,10 @@
   background-position: center;
 }
 
+.sub-bg {
+  padding-top: 100px;
+}
+
 .tech2 {
   background-image: url('./img/tech2.jpg');
   background-size: cover;

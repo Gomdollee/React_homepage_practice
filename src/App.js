@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import data from './data.js'
 import { useState, useEffect } from 'react';
-import { Routers, Route, Link, Routes, useNavigate, Outlet } from 'react-router-dom'
+import { Routers, Route, Link, Routes, useNavigate, Outlet  } from 'react-router-dom'
 import Message from './\bcomponent/message';
 
 
@@ -42,7 +42,7 @@ function App() {
         <Route path='/' element={
           <div>
             <div className='main-bg' style={{ backgroundImage: 'url(' + bg + ')' }}> </div>
-            <Container>
+            <Container className='sub-bg'>
               <Row>
                 {
                   intro.map((a, i) => {
@@ -56,8 +56,8 @@ function App() {
         <Route path='/message' Component={Message}/>
         
         <Route path='/info' element={<Info/>}>  {/* nested routes */}
-          <Route path='/info/member' element={<Info/>}/> 
-          <Route path='/info/location' element={<Info/>}/> 
+          <Route path='member' element={<div>회사 조직도</div>}/> {/* path='/info/member' */}
+          <Route path='location' element={<div>회사 위치정보</div>}/> 
         </Route>
 
         <Route path='/estimate' element={<div>견적문의</div>} />
@@ -87,6 +87,7 @@ function Info() {
   return (
     <div>
       <h4>사업소개</h4>
+      <Outlet></Outlet>
     </div>
   )
 }
