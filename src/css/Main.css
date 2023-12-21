@@ -1,0 +1,20 @@
+.main-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 화면 전체 높이를 사용하여 화면 중앙에 메인 컴포넌트 배치 */
+  }
+
+
+.main-card {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 카드들 사이의 간격 조정 */
+    flex-wrap: wrap; /* 카드가 너무 많아서 한 줄에 모두 배치되지 않을 경우 자동으로 다음 줄에 배치 */
+  }
+  
+  .card {
+    width: 200px; /* 카드의 너비 */
+    height: 200px; /* 카드의 높이 */
+    /* 카드 스타일 */
+  }

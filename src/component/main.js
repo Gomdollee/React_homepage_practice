@@ -1,37 +1,48 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import '../css/Main.css'; 
+
 
 function Main() {
-    return (
-        <div>
-            <div className="main-bg">
-                <Card></Card>
-            </div>
+    const cardsData = [
+        {
+          img: '../img/tech2.jpg',
+          title: '인사말',
+          description: 'Ceo Message',
+          link: '/greetings', // 이동할 페이지의 경로
+        },
+        {
+          img: '../img/tech2.jpg',
+          title: '사업소개',
+          description: 'Business Introduction',
+          link: '/business-intro', // 이동할 페이지의 경로
+        },
+        // ... 다른 카드들도 추가
+      ];
+    
+      return (
+        <div className="main-bg">
+          <div className="main-card">
+            {cardsData.map((card, index) => (
+              <Card
+                key={index}
+                image={card.img}
+                title={card.title}
+                description={card.description}
+              />
+            ))}
+          </div>
         </div>
-    )
-}
+      );
+    };
+    
 
 export default Main;
 
-function Card() {
+function Card({ img, title, description }) {
     return (
-        <Container className='main-card'>
-            <Row>
-                <Col>
-                    <div className='tech2'>인사말 </div>
-                        <span className='tech2_sp'>Ceo Message</span>
-                </Col>
-                <Col>
-                    <div className='tech3'>사업소개</div>
-                </Col>
-                <Col>
-                    <div className='tech4'>견적문의</div>
-                </Col>
-                <Col>
-                    <div className='tech5'>오시는길</div>
-                </Col>
-            </Row>
-        </Container>
-    )
-}
+        <div className="card">
+          <img src={img} alt={title} />
+          <h2>{title}</h2>
+          <p>{description}</p>
+        </div>
+      );
+    };

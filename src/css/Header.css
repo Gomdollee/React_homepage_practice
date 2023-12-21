@@ -1,0 +1,107 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.logo-container {
+    margin-right: auto; /* 로고 컨테이너를 왼쪽으로 이동 */
+    margin-left: 20px; /* 추가: 로고와 메뉴 사이 여백 */
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* 메뉴를 가운데로 정렬 */
+    gap: 30px; 
+    margin-right: 100px;
+}
+
+.nav-menu li {
+    display: inline-block; /* 각 메뉴 아이템을 수평으로 정렬 */
+  }
+  
+
+.nav-menu li a:hover {
+    color: #57a0d3;
+}
+
+.brand {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.stx {
+    color: #e60000; /* 빨간색 */
+    margin-right: 5px; /* Stx와 다음 텍스트 사이 간격 */
+    font-size: 26px; /* 폰트 크기 조정 */
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 60px);
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+  min-width: 140px;
+  white-space: nowrap;
+  color: #000 !important; /* 하위 메뉴 글자 색을 검은색으로 설정 */
+}
+
+.dropdown-menu a {
+    display: block;
+    text-decoration: none;
+    color: #000; /* 하위 메뉴의 글자 색을 검은색으로 설정 */
+    transition: background-color 0.3s ease;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+  }
+
+.nav-menu li a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    line-height: 50px;/* 메뉴 항목의 높이 조정 */
+    display: block; /* 블록 요소로 변경하여 전체 영역에 링크가 적용되도록 함 */
+}
+
+.nav-menu > li > a {
+    color: #fff; /* 메인 메뉴의 글자 색을 흰색으로 설정 */
+    text-decoration: none;
+  }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+
+/* 하위 메뉴 간의 구분선 */
+
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
+  color: #57a0d3;
+}
+
