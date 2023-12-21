@@ -1,0 +1,12 @@
+.dropdown-toggle::after {
+    display: none;
+}
+
+.menu1 {
+    
+    margin-left: 300px;
+}
+
+.menu2 , .menu3 {
+    margin-left: 100px;
+}

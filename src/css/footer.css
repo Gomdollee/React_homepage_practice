@@ -1,0 +1,23 @@
+.main_footer{
+
+    background-color: #424242;
+    height: 70px;
+    
+    bottom: 0;
+    width: 100%;
+
+}
+
+.logo_footer {
+    width: 350px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 5px;
+  }
+  
+  .content_footer{
+    color: white;
+    font-size: small;
+    padding-top: 20px;
+    margin-right: 50px;
+  }
