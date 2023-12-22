@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Routers, Route, Link, Routes } from 'react-router-dom'
-import '../App.css';
+import '../css/Message.css'; 
 
 
 function Message() {

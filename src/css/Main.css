@@ -9,12 +9,46 @@
 .main-card {
     display: flex;
     justify-content: center;
-    gap: 20px; /* 카드들 사이의 간격 조정 */
+    gap: 50px; /* 카드들 사이의 간격 조정 */
     flex-wrap: wrap; /* 카드가 너무 많아서 한 줄에 모두 배치되지 않을 경우 자동으로 다음 줄에 배치 */
   }
   
   .card {
-    width: 200px; /* 카드의 너비 */
-    height: 200px; /* 카드의 높이 */
-    /* 카드 스타일 */
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.9;
+  }
+  
+  .text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+  }
+
+  .text-container p{
+    font-size: medium;
   }

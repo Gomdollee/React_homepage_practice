@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Route, Routes, Link, useNavigate, Outlet } from 'react-router-dom';
 import '../css/Header.css'; 
 
 const Header = () => {
@@ -15,8 +15,8 @@ const Header = () => {
 
     return (
         <nav className="navbar">
-            <div className="brand">
-                <span className="stx">Stx</span> Network Service
+            <div className="brand"><a className="brandForA" href='/'>
+                <span className="stx">Stx</span> Network Service</a>
             </div>
             <ul className="nav-menu">
                 <li><a href="/">Home</a></li>
@@ -24,7 +24,7 @@ const Header = () => {
                     <a href="/about">회사소개</a>
                     {isOpen && (
                         <ul className="dropdown-menu">
-                            <li><a href="/about1">CEO 인사말</a></li>
+                            <li><a href="/message">CEO 인사말</a></li>
                             <li><a href="/about2">연혁</a></li>
                             <li><a href="/about3">조직도</a></li>
                             <li><a href="/about4">비전</a></li>

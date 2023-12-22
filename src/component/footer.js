@@ -1,16 +1,17 @@
 import React from 'react';
 import '../css/Footer.css'; 
+import footerImg from'../img/logo_footer.png'
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-logo">
-        <img src="your_logo.png" alt="Company Logo" />
+        <img src={footerImg} alt="Company Logo" />
       </div>
       <div className="footer-info">
-        <p>회사 정보</p>
-        <p>주소</p>
-        {/* 필요한 회사 정보 등을 여기에 추가할 수 있습니다 */}
+        <p>STX네트워크서비스 주식회사 | 대표이사 이명구 | 서울시 금천구 가산디지털1로 151, 이노플렉스1차 705호</p>
+        <p>TEL : 02-853-0072 | FAX : 02-853-7187 | E-mail : stxns@stx.co.kr</p>
+        <p>COPYRIGHTS2019 STX Network Service. ALL RIGHTS RESERVED</p>
       </div>
     </footer>
   );
