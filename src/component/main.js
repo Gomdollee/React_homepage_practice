@@ -4,6 +4,7 @@ import tech3 from '../img/tech3.jpg';
 import tech4 from '../img/tech4.jpg';
 import tech5 from '../img/tech5.jpg';
 
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { Routers, Route, Link, Routes, useNavigate, Outlet } from 'react-router-dom'
 
 
@@ -19,7 +20,7 @@ function Main() {
       image: tech3,
       title: '사업소개',
       description: 'Business Introduction',
-      link: '/',
+      link: '/introduce',
     },
     {
       image: tech4,
@@ -37,20 +38,22 @@ function Main() {
 
   return (
     <div className="main-bg">
-      <div className="main-card">
+      <TransitionGroup className="main-card">
         {cardsData.map((card, index) => (
-          <Link to={card.link} key={index} style={{ textDecoration: 'none' }}>
-            <Card
-              image={card.image}
-              title={card.title}
-              description={card.description}
-            />
-          </Link>
+          <CSSTransition key={index} timeout={500} classNames="card">
+            <Link to={card.link} style={{ textDecoration: 'none' }}>
+              <Card
+                image={card.image}
+                title={card.title}
+                description={card.description}
+              />
+            </Link>
+          </CSSTransition>
         ))}
-      </div>
+      </TransitionGroup>
     </div>
   );
-};
+}
 
 
 export default Main;

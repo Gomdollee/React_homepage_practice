@@ -60,18 +60,3 @@ const Header = () => {
 
 export default Header;
 
-
-// <Navbar expand="lg" className="bg-body-tertiary">
-//         <Container>
-//           <Navbar.Brand onClick={() => { navigaet('/') }}>Stx Network Service</Navbar.Brand>
-//           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//           <Navbar.Collapse id="basic-navbar-nav">
-//             <Nav className="me-auto">
-//               <Nav.Link onClick={() => { navigaet('/') }}></Nav.Link>
-//               <Nav.Link onClick={() => { navigaet('/message') }}>인사말</Nav.Link>
-//               <Nav.Link href="/info" element={<Message />}>사업소개</Nav.Link>
-//               <Nav.Link href="/estimate">견적문의</Nav.Link>
-//             </Nav>
-//           </Navbar.Collapse>
-//         </Container>
-//       </Navbar>

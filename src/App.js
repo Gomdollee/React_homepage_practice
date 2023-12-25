@@ -13,6 +13,7 @@ import Message from './\bcomponent/message';
 import Main from './\bcomponent/main';
 import Header from './\bcomponent/header';
 import Footer from './\bcomponent/footer';
+import Introduce from './\bcomponent/\bintroduce';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path='/' Component={Main} />
         <Route path='/message' Component={Message} />
+        <Route path='/introduce' Component={Introduce}/>
       </Routes>
       <Footer></Footer>
     </div>
