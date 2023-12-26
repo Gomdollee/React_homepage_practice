@@ -35,11 +35,11 @@ const Header = () => {
                     )}
                 </li>
                 <li className="dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <a href="/services">사업분야</a>
+                    <a href="/introduce">사업분야</a>
                     {isOpen && (
                         <ul className="dropdown-menu">
-                            <li><a href="/service1">ICT Service</a></li>
-                            <li><a href="/service2">IT Outsourcing</a></li>
+                            <li><a href="/introduce">ICT Service</a></li>
+                            <li><a href="/introduce">IT Outsourcing</a></li>
                         </ul>
                     )}
                 </li>
@@ -48,7 +48,7 @@ const Header = () => {
                     {isOpen && (
                         <ul className="dropdown-menu">
                             <li><a href="/contact1">공지사항</a></li>
-                            <li><a href="/contact2">찾아오시는 길</a></li>
+                            <li><a href="/directions">찾아오시는 길</a></li>
                             <li><a href="/contact3">견적문의</a></li>
                         </ul>
                     )}

@@ -5,10 +5,12 @@ import tech4 from '../img/tech4.jpg';
 import tech5 from '../img/tech5.jpg';
 
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { Routers, Route, Link, Routes, useNavigate, Outlet } from 'react-router-dom'
-
+import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 function Main() {
+  const [selectedCard, setSelectedCard] = useState(null);
+
   const cardsData = [
     {
       image: tech2,
@@ -32,22 +34,31 @@ function Main() {
       image: tech5,
       title: '오시는길',
       description: 'Directions',
-      link: '/',
+      link: '/directions',
     },
   ];
+
+  const handleCardSelect = (index) => {
+    setSelectedCard(index);
+  };
 
   return (
     <div className="main-bg">
       <TransitionGroup className="main-card">
         {cardsData.map((card, index) => (
           <CSSTransition key={index} timeout={500} classNames="card">
-            <Link to={card.link} style={{ textDecoration: 'none' }}>
-              <Card
-                image={card.image}
-                title={card.title}
-                description={card.description}
-              />
-            </Link>
+            <div
+              className={`card ${selectedCard === index ? 'selected' : ''}`}
+              onClick={() => handleCardSelect(index)}
+            >
+              <Link to={card.link} style={{ textDecoration: 'none' }}>
+                <Card
+                  image={card.image}
+                  title={card.title}
+                  description={card.description}
+                />
+              </Link>
+            </div>
           </CSSTransition>
         ))}
       </TransitionGroup>
@@ -55,8 +66,9 @@ function Main() {
   );
 }
 
-
 export default Main;
+
+
 
 const Card = ({ image, title, description }) => {
   return (
@@ -71,3 +83,4 @@ const Card = ({ image, title, description }) => {
     </div>
   );
 };
+
